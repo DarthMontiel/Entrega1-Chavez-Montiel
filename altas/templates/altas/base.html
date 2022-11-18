@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INVENTARIO</title>
+
+    <link rel="stylesheet" href="{% static 'altas/css/styles.css' %}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <!--INICIO MENU NAVEGACIÓN-->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <a href="#" class="enlace">
+            <img src="{% static 'altas/images/logo.png' %}" alt="" class="logo">
+        </a>
+        <ul>
+            <!--{% url 'inventario-licencias' %}-->
+            <li><a class="active" href="#">Inicio</a></li>
+            <li><a href="{% url 'inventario-licencias' %}">Licencias</a></li>
+            <li><a href="#">Laptops</a></li>
+            <li><a href="#">PC Desktop</a></li>
+            <li><a href="#">Impresoras</a></li>
+            <li><a href="#">Disp. Moviles</a></li>
+        </ul>
+    </nav>
+    <!--FIN MENU NAVEGACIÓN-->
+    {% block contenido %}
+
+    {% endblock %}
+</body>
+</html>

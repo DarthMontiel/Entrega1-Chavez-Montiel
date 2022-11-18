@@ -1,0 +1,18 @@
+{% extends 'altas/base.html' %}
+
+{% block contenido %}
+<br>
+<center><h1>REGISTRO DE NUEVA LICENCIA</h1></center>
+<br>
+<center>
+    <form action="" method="post">
+        {% csrf_token %}
+
+        <p>Software: <input type="text" name="software"></p><br>
+        <p>Licencia: <input type="text" name="licencia"></p><br>
+        <p>Email de Registro: <input type="text" name="email"></p><br>
+
+        <input class="button" type="submit" value="ALTA">
+    </form>
+</center>
+{% endblock %}
